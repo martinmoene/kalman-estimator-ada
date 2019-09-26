@@ -5,9 +5,9 @@
 -- Distributed under the Boost Software License, Version 1.0.
 -- (See accompanying file LICENSE.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 
-project avr_blink_led_e extends "avr_app" is
+-- Avr-Ada project: https://sourceforge.net/projects/avr-ada/
 
-   -- Attributes --
+project avr_blink_led_e extends "avr_app" is
 
    for Main use ("avr_blink_led_e.adb");
    for Source_Dirs use ("src");
