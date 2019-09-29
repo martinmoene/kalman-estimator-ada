@@ -5,7 +5,23 @@
 # Distributed under the Boost Software License, Version 1.0.
 # (See accompanying file LICENSE.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 
-# Generate the following files:
+# Dependencies:
+# - AdaCore AVR toolsuite, https://www.adacore.com/download/more
+# - AVRDUDE programmer, http://savannah.nongnu.org/projects/avrdude
+
+# Environment variables used:
+# - AVR_ADACORE_ROOT - toplevel folder that contains bin folder
+# - AVR_DUDE_ROOT    - toplevel folder that contains bin folder
+
+# Expects variables (undefined):
+#  - main: basename of single Ada source file to compile
+
+# Optional variables (=default): 
+# - arch=avr5
+# - chip=m328p
+# - crt1=../crt/crt$(chip)
+
+# Generates the following files:
 # - $(main).ali
 # - $(main).elf
 # - $(main).hex
