@@ -52,7 +52,7 @@ elf: $(main).elf
 $(main).s: $(main).adb
 	$(AVR_ADA_ROOT)\bin\avr-gnatmake -P../$(main).gpr -gnat2012 -gnatyN -p -O3 -XMCU=$(chip) -c -cargs -S
 
-$(main).elf: $(main).adb $(crt1).o force
+$(main).elf: $(main).adb
 	$(AVR_ADA_ROOT)\bin\avr-gnatmake -P../$(main).gpr -gnat2012 -gnatyN -p -O3 -XMCU=$(chip) -largs -Wl,-Map=$(main).map,--cref
 
 $(main).hex: $(main).elf
